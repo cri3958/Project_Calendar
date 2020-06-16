@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/baseLayout"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@android:color/holo_blue_light">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="11월"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/btntoday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btntoday"
+                app:layout_constraintRight_toLeftOf="@+id/btnviewtype"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/btnviewtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnviewtype"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:text="@string/year"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:id="@+id/month_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/sunday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/monday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tuesday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/wednesday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/thursday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/friday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/saturday"
+                    android:background="@drawable/edge"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+            <GridView
+                android:id="@+id/monthgridview"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:numColumns="7"
+                android:listSelector="@android:color/holo_green_light">
+            </GridView>
+            <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                   <Button
+                      android:id="@+id/btn_b_month"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="@string/b_month" />
+                    <Button
+                       android:id="@+id/btn_n_month"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="@string/n_month" />
+               </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/week_layout"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/typeofweek"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/week_blank"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/edge"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/week_1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+                <TextView
+                    android:id="@+id/week_7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:background="@drawable/edge"
+                    android:text="00" />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/weekview">
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_0"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_1"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_2"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_3"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_4"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_5"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_6"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_7"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_8"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_9"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_10"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_11"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_12"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_13"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_14"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_15"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_16"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_17"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_18"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_19"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_20"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_21"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_22"
+                            android:gravity="center">
+                        </TextView>
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/edge"
+                            android:text="@string/t_23"
+                            android:gravity="center">
+                        </TextView>
+
+                    </LinearLayout>
+                    <GridView
+                        android:id="@+id/weekgridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:numColumns="7">
+
+                    </GridView>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:orientation="horizontal"
+                android:id="@+id/btn_week"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_b_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/b_week" />
+
+                <Button
+                    android:id="@+id/btn_n_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/n_week" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

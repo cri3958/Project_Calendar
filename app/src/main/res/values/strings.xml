@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Project_Calendar</string>
+
+    <string name="year">2020년</string>
+
+    <string name="sunday">일</string>
+    <string name="monday">월</string>
+    <string name="tuesday">화</string>
+    <string name="wednesday">수</string>
+    <string name="thursday">목</string>
+    <string name="friday">금</string>
+    <string name="saturday">토</string>
+
+    <string name="btntoday">오늘로</string>
+    <string name="btnviewtype">보기 방식</string>
+
+    <string name="b_month">이전 달</string>
+    <string name="n_month">다음 달</string>
+    <string name="b_week">이전 주</string>
+    <string name="n_week">다음 주</string>
+
+    <string name="typeMonth">월간일정</string>
+    <string name="typeWeekly">주간일정</string>
+
+    <string name="addtitle">약속 제목</string>
+    <string name="addstarttime">시작시간</string>
+    <string name="addfinishtime">종료시간</string>
+    <string name="addplace">장소</string>
+    <string name="addmemo">메모</string>
+
+    <string name="hour">시 </string>
+    <string name="min">분</string>
+    <string name="min_s">분 부터</string>
+    <string name="min_f">분 까지</string>
+
+    <string name="choose_time">시간선택하기</string>
+
+    <string name="t_0">00시</string>
+    <string name="t_1">01시</string>
+    <string name="t_2">02시</string>
+    <string name="t_3">03시</string>
+    <string name="t_4">04시</string>
+    <string name="t_5">05시</string>
+    <string name="t_6">06시</string>
+    <string name="t_7">07시</string>
+    <string name="t_8">08시</string>
+    <string name="t_9">09시</string>
+    <string name="t_10">10시</string>
+    <string name="t_11">11시</string>
+    <string name="t_12">12시</string>
+    <string name="t_13">13시</string>
+    <string name="t_14">14시</string>
+    <string name="t_15">15시</string>
+    <string name="t_16">16시</string>
+    <string name="t_17">17시</string>
+    <string name="t_18">18시</string>
+    <string name="t_19">19시</string>
+    <string name="t_20">20시</string>
+    <string name="t_21">21시</string>
+    <string name="t_22">22시</string>
+    <string name="t_23">23시</string>
+
+    <string name="title_activity_week">week</string>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/week_item_background"
+    android:background="@drawable/edge">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_text_workname"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/week_text_worktime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/week_text_workname"
+        android:textColor="@android:color/black"
+        android:textSize="7sp"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/week_text_workplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/week_text_worktime"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:textSize="8sp"/>
+</LinearLayout>
